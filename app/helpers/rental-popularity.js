@@ -1,5 +1,5 @@
 import Ember from 'ember';
-
+ 
 export function rentalPopularity(params) {
   var rental = params[0];
 
