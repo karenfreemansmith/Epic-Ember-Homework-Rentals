@@ -1,0 +1,14 @@
+<h2>More information about {{model.owner}}'s {{model.type}}</h2>
+Located in {{model.city}}, this {{model.bedrooms}} bedroom {{model.type}} is
+available by arrangement through {{model.owner}}.
+<br>
+<p><img src={{model.image}} alt={{model.type}}></p>
+
+<h2> Reviews </h2>
+<ul>
+  {{#each model.reviews as |review|}}
+    {{review-tile review=review}}
+  {{/each}}
+</ul>
+
+{{new-review saveReview="saveReview" rental=model}}
